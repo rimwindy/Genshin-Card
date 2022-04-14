@@ -1,5 +1,9 @@
 # genshin-impact-card
 
-origin: [Genshin-Card](https://replit.com/@journeyad/Genshin-Card)
+原 Repo: [Genshin-Card](https://replit.com/@journeyad/Genshin-Card) [genshin-impact-card](https://github.com/journey-ad/genshin-impact-card)
 
-origin readme: [README_backup](./README_backup.md)
+原 Readme: [README_backup](./README_backup.md)
+
+## 环境变量
+
+`COOKIE` : 米游社cookie
