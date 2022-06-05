@@ -9,8 +9,8 @@ const roleIdCache = new NodeCache({ stdTTL: 60 * 60 * 24 * 365 });
 const cardCache = new NodeCache({ stdTTL: 60 * 60 * 24 });
 
 const __API = {
-  FETCH_ROLE_ID: 'https://api-takumi.mihoyo.com/game_record/app/card/wapi/getGameRecordCard',
-  FETCH_ROLE_INDEX: 'https://api-takumi.mihoyo.com/game_record/app/genshin/api/index'
+  FETCH_ROLE_ID: 'https://api-takumi-record.mihoyo.com/game_record/app/card/wapi/getGameRecordCard',
+  FETCH_ROLE_INDEX: 'https://api-takumi-record.mihoyo.com/game_record/app/genshin/api/index'
 }
 
 const HEADERS = {
