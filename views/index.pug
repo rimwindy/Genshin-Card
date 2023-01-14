@@ -10,16 +10,16 @@ html
     h3 使用方法:
 
     h5 SVG 地址
-    code https://genshin-card.amarea.cn/{背景编号}/{米游社ID}.png
+    code https://genshin-card.akaneym.com/{背景编号}/{米游社ID}.png
 
     h5 Img 标签
-    code &lt;img src="https://genshin-card.amarea.cn/{背景编号}/{米游社ID}.png" alt="genshin-card" />
+    code &lt;img src="https://genshin-card.akaneym.com/{背景编号}/{米游社ID}.png" alt="genshin-card" />
 
     h5 BBCode
-    code [img]https://genshin-card.amarea.cn/{背景编号}/{米游社ID}.png[/img]
+    code [img]https://genshin-card.akaneym.com/{背景编号}/{米游社ID}.png[/img]
 
     h5 Markdown
-    code ![](https://genshin-card.amarea.cn/{背景编号}/{米游社ID}.png)
+    code ![](https://genshin-card.akaneym.com/{背景编号}/{米游社ID}.png)
 
     h3 背景编号
     h5 <code>rand</code> 随机背景
@@ -30,15 +30,15 @@ html
       3-5,7,9,12-15 -> [3, 4, 5, 7, 9, 12, 13, 14, 15]
 
     h3 示例:
-    img(src="https://genshin-card.amarea.cn/rand/12436479.png" alt="示例图片")
+    img(src="https://genshin-card.akaneym.com/rand/76098423.png" alt="示例图片")
 
     details
       summary(style='display: inline-block;', onclick='_evt_push("click", "normal", "more_theme")')
         h5(style='display: inline-block; cursor: pointer;') 探索度
 
       p 由于配额限制，带有探索度和宝箱数量的图片地址路由使用以下形式：
-      code https://genshin-card.amarea.cn/detail/{背景编号}/{米游社ID}.png
-      img(src="https://genshin-card.amarea.cn/detail/42,51-56/12436479.png" alt="示例图片")
+      code https://genshin-card.akaneym.com/detail/{背景编号}/{米游社ID}.png
+      img(src="https://genshin-card.akaneym.com/detail/42,51-56/76098423.png" alt="示例图片")
 
     details
       summary(style='display: inline-block;', onclick='_evt_push("click", "normal", "more_theme")')
@@ -48,7 +48,7 @@ html
       each _, i in Array(60)
         div(class='perview-card')
           span #{i}
-          img(src='https://genshin-card.amarea.cn/' + i + '/12436479.png')
+          img(src='https://genshin-card.akaneym.com/' + i + '/76098423.png')
 
     h3 Credits
     ul
@@ -74,7 +74,7 @@ html
 
     h3 Tool
     .tool
-      code https://genshin-card.amarea.cn
+      code https://genshin-card.akaneym.com
       input#bgIdx(type='text', value='0', style='display: inline-block; width: 40px; height: 1.4em; line-height: 1.4em; margin: 0 4px; vertical-align: middle;')
       code /
       input#uid(type='text', placeholder='米游社ID', style='display: inline-block; width: 120px; height: 1.4em; line-height: 1.4em; margin: 0 4px; vertical-align: middle;')
@@ -96,7 +96,7 @@ html
             return
           }
 
-          img.src = 'https://genshin-card.amarea.cn/' + bgIdx + '/' + uid + '.png'
+          img.src = 'https://genshin-card.akaneym.com/' + bgIdx + '/' + uid + '.png'
         })
 
     p.copy

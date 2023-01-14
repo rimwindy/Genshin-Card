@@ -3,7 +3,14 @@ const NodeCache = require("node-cache")
 const http = require('./utils/http')
 const util = require('./utils/index')
 
-const logger = pino({ level: process.env.LOG_LEVEL || 'info' });
+const logger = pino({
+  level: process.env.LOG_LEVEL || 'info',
+  prettyPrint: {
+    colorize: true,
+    translateTime: 'SYS:standard',
+    ignore: 'hostname,pid',
+  }
+});
 
 const roleIdCache = new NodeCache({ stdTTL: 60 * 60 * 24 * 365 });
 const cardCache = new NodeCache({ stdTTL: 60 * 60 * 24 });
@@ -148,7 +155,7 @@ const userInfo = ({uid, detail=false}) => {
               achievement_number: achievement_number.value,
               spiral_abyss: spiral_abyss.value
             }
-            
+
             const data = {
               uid: game_role_id,
               ...parsed,

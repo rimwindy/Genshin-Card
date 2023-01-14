@@ -10,14 +10,21 @@ const util = require('./index')
 
 const skinPath = path.resolve(__dirname, '../assets/skin')
 const woff2Cache = new NodeCache({ stdTTL: 60 * 60 * 24 * 365 })
-const logger = pino({ level: process.env.LOG_LEVEL || 'info' })
+const logger = pino({
+  level: process.env.LOG_LEVEL || 'info',
+  prettyPrint: {
+    colorize: true,
+    translateTime: 'SYS:standard',
+    ignore: 'hostname,pid',
+  }
+});
 
 const skinList = {}
 
 const baseGlyph = `
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 abcdefghijklmnopqrstuvwxyz
-1234567890 
+1234567890
 "!\`?'.,;:()[]{}<>|/@\\^$-%+=#_&~*
 活跃天数角色数量成就达成深境螺旋世界探索
 `
@@ -155,7 +162,7 @@ const svg = async ({ data, skin = 0, detail = false }) => {
                 background-size: 100%;
                 text-shadow: 0px 0px 10px rgba(19, 19, 19, 50%);
               }
-              
+
               .top::before,
               .top::after {
                 content: '';
@@ -176,7 +183,7 @@ const svg = async ({ data, skin = 0, detail = false }) => {
                 background-image: linear-gradient(to bottom, rgba(0,59,86,.35), transparent);
                 z-index: 0;
               }
-              
+
               .user-info {
                 position: relative;
                 display: inline-block;
@@ -267,7 +274,7 @@ const svg = async ({ data, skin = 0, detail = false }) => {
                 background-position: bottom;
                 text-shadow: 0px 0px 10px rgba(19, 19, 19, 50%);
               }
-              
+
               .bottom::before,
               .bottom::after {
                 content: '';

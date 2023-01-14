@@ -5,7 +5,14 @@ const cache = require('./utils/cache')
 const userInfo = require('./userInfo')
 const svg = require('./utils/svg')
 
-const logger = pino({ level: process.env.LOG_LEVEL || 'info' });
+const logger = pino({
+  level: process.env.LOG_LEVEL || 'info',
+  prettyPrint: {
+    colorize: true,
+    translateTime: 'SYS:standard',
+    ignore: 'hostname,pid',
+  }
+});
 
 const app = express()
 app.use(express.static('public'))
